@@ -1,31 +1,32 @@
 import TeamUser1 from "../assets/teamUser-1.png";
-
-console.log(TeamUser1);
+import TeamUser2 from "../assets/teamUser-2.png";
+import TeamUser3 from "../assets/teamUser-3.png";
+import TeamUser4 from "../assets/teamUser-4.png";
 
 const sampleData = [
   {
-    id: "1",
+    img: TeamUser1,
     title: "Anirudh Arun",
     name: "Project Manager",
     rating: 9.8,
     bgColor: "#FFE484",
   },
   {
-    id: "2",
+    img: TeamUser2,
     title: "UX Designer",
     name: "Samvrant",
     rating: 9.2,
     bgColor: "#DCF9FF",
   },
   {
-    id: "2",
+    img: TeamUser3,
     title: "UI Designer",
     name: "Aryamann",
     rating: 9.1,
     bgColor: "rgba(11, 19, 21, 0.16)",
   },
   {
-    id: "4",
+    img: TeamUser4,
     title: "Motion Designer",
     name: "Dhanush",
     rating: 8.5,
@@ -48,7 +49,7 @@ const TeamPanel = () => {
               >
                 <img
                   className="performance-widget__member-img"
-                  src={`/src/assets/teamUser-${e.id}.png`}
+                  src={e.img}
                   alt=""
                 />
               </span>
