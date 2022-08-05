@@ -2,6 +2,7 @@ import TeamUser1 from "../assets/teamUser-1.png";
 import TeamUser2 from "../assets/teamUser-2.png";
 import TeamUser3 from "../assets/teamUser-3.png";
 import TeamUser4 from "../assets/teamUser-4.png";
+import TopMemberStar from "../assets/top-member-star.png";
 
 const sampleData = [
   {
@@ -41,12 +42,19 @@ const TeamPanel = () => {
         <h3 className="performance-widget__title"> Team Member Performance</h3>
       </div>
       <ul className="performance-widget__list">
-        {sampleData.map((e) => (
+        {sampleData.map((e, i) => (
           <li className="performance-widget__list-item">
             <div className="performance-widget__list-term-part">
               <span
                 className={`performance-widget__image-container ${e.bgColor}`}
               >
+                {i == 0 && (
+                  <img
+                    className="performance-widget__top-member-star-img"
+                    src={TopMemberStar}
+                    alt=""
+                  />
+                )}
                 <img
                   className="performance-widget__member-img"
                   src={e.img}

@@ -220,8 +220,14 @@
   border: 3px solid white;
   border-radius: 8px;
   margin-right: 1rem;
+  position: relative;
 }
 
+.performance-widget__top-member-star-img {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+}
 .performance-widget__text-box {
   padding-right: 1rem;
   display: flex;
