@@ -7,8 +7,8 @@ import TopMemberStar from "../assets/top-member-star.png";
 const sampleData = [
   {
     img: TeamUser1,
-    title: "Anirudh Arun",
-    name: "Project Manager",
+    title: "Project Manager",
+    name: "Anirudh Arun",
     rating: 9.8,
     bgColor: "bg-[#ffe484]",
   },
