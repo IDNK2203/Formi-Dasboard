@@ -85,7 +85,7 @@
   display: flex;
   min-width: 10rem;
   justify-content: space-between;
-  color: #ed1690;
+  color: $primary;
 }
 
 .topbar__avatar-img-container {
@@ -97,58 +97,73 @@
 }
 
 // Data WIdget STYLES
-
-.data-widget__top {
-  display: flex;
-  justify-content: space-between;
+.data-widget__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 0.75rem;
+  width: 50%;
+  margin-right: 1rem;
 }
 
 .data-widget__list-item {
   padding: 0.75rem;
+  background-color: $dashboard-panel-bg;
+  border-radius: 1rem;
+  box-shadow: 2px 2px 6px 0 rgba(0, 0, 0, 0.23);
+}
+
+.data-widget__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .data-widget__bottom {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
 }
 
 .data-widget__value {
   text-align: right;
+  font-weight: 700;
 }
 
-#progressInput {
-  margin: 20px auto;
-  width: 30%;
+.data-widget__title {
+  font-size: 0.85rem;
+  font-weight: 500;
 }
-
-.circle-background,
-.circle-progress {
-  fill: none;
-}
-
-.circle-background {
-  stroke: none;
-}
-
-.circle-progress {
-  // stroke: red;
-}
-
-.circle-text {
+.data-widget__text {
   font-size: 0.75rem;
-  font-weight: bold;
-  // fill: red;
 }
 
 // CHART WIDGET STYLES
 .chart-widget {
-  width: 100%;
   aspect-ratio: 16/9;
+  padding: 1rem;
+  width: 50%;
+  background-color: $dashboard-panel-bg;
+  border-radius: 1rem;
+  box-shadow: 2px 2px 6px 0 rgba(0, 0, 0, 0.25);
 }
 
+.chart-widget.mr-4.chart-widget--area {
+  width: 70%;
+  aspect-ratio: 16/7.5;
+}
+.chart-widget__title {
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.chart-widget__title-container {
+  flex: 0.35;
+}
 .chart-widget__header {
   display: flex;
+  margin-bottom: 1rem;
 }
 
 .chart-widget__actions {
@@ -161,10 +176,6 @@
   flex: 1;
   justify-content: space-between;
   align-items: center;
-}
-
-.chart-widget__title-container {
-  flex: 0.5;
 }
 
 .chart-widget__legend {
@@ -182,26 +193,21 @@
   margin: 0 0.5rem;
 }
 
-.mx-2 {
-  margin-left: 5.5rem;
-}
-
-.chart-widget {
-  padding: 1rem;
-}
-
 // PERFORMANCE_WIDGET
 
 .performance-widget {
   padding: 1rem;
-}
-
-.performance-widget__header {
-  // margin: 1rem 0;
+  background-color: $dashboard-panel-bg;
+  margin-left: 1rem;
+  width: 30%;
+  border-radius: 1rem;
 }
 
 .performance-widget__list-item {
   display: flex;
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+  justify-content: space-between;
 }
 
 .performance-widget__list-term-part {
@@ -230,170 +236,19 @@
 }
 
 .performance-widget__list-term-member-title {
-  font-weight: 300;
   font-size: 0.65rem;
+  font-weight: 400;
+  color: #9090babd;
 }
 
 .performance-widget__member-rating {
   padding: 0.15rem 0.5rem;
   font-size: 0.6rem;
-  background-color: aqua;
+  background-color: #113c5e80;
   border-radius: 4px;
   font-weight: bold;
+  color: $secondary;
 }
-
-//
-.page {
-  width: 100%;
-}
-
-.panel-section__top {
-  display: flex;
-}
-
-// ------------------------------
-/* Inline #0 | http://localhost:5173/ */
-
-.data-widget__list {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 0.75rem;
-  width: 50%;
-  margin-right: 1rem;
-}
-
-.data-widget__list-item {
-  background-color: #222240;
-  border-radius: 1rem;
-}
-
-.chart-widget {
-  width: 50%;
-  background-color: #222240;
-  border-radius: 1rem;
-  box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.25);
-}
-
-.chart-widget__title-container {
-  flex: 0.25;
-}
-
-.panel-section__top {
-  justify-content: center;
-  align-items: center;
-  padding: 1rem 0;
-}
-
-.performance-widget {
-  background-color: #222240;
-  margin-left: 1rem;
-}
-
-/* Inline #1 | http://localhost:5173/ */
-
-.panel-section__bottom {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem 0;
-}
-
-/* Inline #0 | http://localhost:5173/ */
-
-.data-widget__list {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  margin-right: 1rem;
-  grid-gap: 1rem;
-}
-
-.chart-widget__title-container {
-  /* flex: 0.5; */
-  flex: 0.35;
-}
-
-.chart-widget {
-  background-color: #222240;
-  border-radius: 1rem;
-}
-
-.data-widget__list-item {
-  background-color: #222240;
-  border-radius: 1rem;
-}
-
-/* Inline #1 | http://localhost:5173/ */
-
-.chart-widget.mr-4.chart-widget--area {
-  width: 70%;
-  aspect-ratio: 16/7.5;
-}
-
-/* Inline #0 | http://localhost:5173/ */
-
-.performance-widget {
-  width: 30%;
-  border-radius: 1rem;
-}
-
-/* Inline #0 | http://localhost:5173/ */
-
-.performance-widget__list-item {
-  padding: 0.5rem;
-  margin: 0.5rem 0;
-  justify-content: space-between;
-}
-
-.page {
-  overflow-y: scroll;
-}
-
-/* Inline #0 | http://localhost:5173/ */
-
-.chart-widget__header {
-  margin-bottom: 1rem;
-}
-
-.data-widget__bottom {
-  margin-top: 2rem;
-  margin-bottom: 0.5rem;
-}
-
-/* Inline #0 | http://localhost:5173/ */
-
-.data-widget__list {
-  grid-gap: 0.75rem;
-}
-
-/* Inline #1 | http://localhost:5173/ */
-
-.data-widget__title {
-  font-size: 0.85rem;
-  font-weight: 500;
-}
-
-.more-icon {
-  font-size: 1.2rem;
-}
-
-.data-widget__text {
-  font-size: 0.75rem;
-}
-
-.data-widget__value {
-  font-weight: 700;
-}
-
-.data-widget__top {
-  align-items: center;
-}
-.chart-widget__title {
-  font-size: 0.85rem;
-  font-weight: 500;
-}
-
-/* Inline #1 | http://localhost:5173/ */
-
 .performance-widget__title {
   font-size: 0.85rem;
   font-weight: 500;
@@ -402,31 +257,27 @@
 .performance-widget__header {
   margin: 0.5rem 0 1rem;
 }
-.performance-widget__member-rating {
-  padding: 0.15rem 0.5rem;
-  font-size: 0.6rem;
-  background-color: #113c5e80;
-  border-radius: 4px;
-  font-weight: bold;
-  color: #00ade2;
-}
 
-/* Inline #0 | http://localhost:5173/ */
-
-.data-widget__list-item {
-  box-shadow: 2px 2px 6px 0 rgba(0, 0, 0, 0.23);
-}
-
-.chart-widget {
-  /* box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.25); */
-  box-shadow: 2px 2px 6px 0 rgba(0, 0, 0, 0.25);
-}
-.performance-widget__list-term-member-title {
-  font-weight: 300;
-  font-weight: 400;
-  color: #9090babd;
-}
 .performance-widget__member-name {
   line-height: 1;
   line-height: 1.25;
+}
+
+#progressInput {
+  margin: 20px auto;
+  width: 30%;
+}
+
+.circle-background,
+.circle-progress {
+  fill: none;
+}
+
+.circle-background {
+  stroke: none;
+}
+
+.circle-text {
+  font-size: 0.75rem;
+  font-weight: bold;
 }

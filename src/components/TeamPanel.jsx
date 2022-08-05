@@ -9,28 +9,28 @@ const sampleData = [
     title: "Anirudh Arun",
     name: "Project Manager",
     rating: 9.8,
-    bgColor: "#FFE484",
+    bgColor: "bg-[#ffe484]",
   },
   {
     img: TeamUser2,
     title: "UX Designer",
     name: "Samvrant",
     rating: 9.2,
-    bgColor: "#DCF9FF",
+    bgColor: "bg-[#DCF9FF]",
   },
   {
     img: TeamUser3,
     title: "UI Designer",
     name: "Aryamann",
     rating: 9.1,
-    bgColor: "rgba(11, 19, 21, 0.16)",
+    bgColor: "bg-[#0b131528]",
   },
   {
     img: TeamUser4,
     title: "Motion Designer",
     name: "Dhanush",
     rating: 8.5,
-    bgColor: "#FF99AD",
+    bgColor: "bg-[#FF99AD]",
   },
 ];
 
@@ -45,7 +45,7 @@ const TeamPanel = () => {
           <li className="performance-widget__list-item">
             <div className="performance-widget__list-term-part">
               <span
-                className={`performance-widget__image-container bg-[${e.bgColor}]`}
+                className={`performance-widget__image-container ${e.bgColor}`}
               >
                 <img
                   className="performance-widget__member-img"

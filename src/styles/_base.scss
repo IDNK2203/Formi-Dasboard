@@ -7,7 +7,7 @@ $sidebar-bg: #13132b;
 $primary: #ed1690;
 $secondary: #00ade2;
 $secondary-bright: #3954ff;
-$secondary-bright-light: rgba(57, 84, 255, 0.05);
+$secondary-bright-light: rgba(57, 84, 255, 0.051);
 $secondary-text: #00ade299;
 
 * {
@@ -16,25 +16,10 @@ $secondary-text: #00ade299;
   font-weight: 400;
 }
 
-.view {
-  background-color: $page-bg;
-  color: white;
-  display: flex;
-  width: 100%;
-  overflow: hidden;
-  height: 100vh;
+.more-icon {
+  font-size: 1.2rem;
 }
 
 .btn-icon {
   margin-right: 0.5rem;
-}
-.btn-cus {
-  text-transform: capitalize;
-  background-color: $primary;
-  height: 2rem;
-  min-height: 2rem;
-}
-
-.btn-cus:hover {
-  background-color: $primary;
 }

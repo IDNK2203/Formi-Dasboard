@@ -62,7 +62,7 @@ const SideBar = () => {
         </ul>
       </nav>
       <div className="sidebar__btn-container">
-        <button className="btn rounded-md text-white font-normal btn-cus">
+        <button className="btn-primary">
           <FiLogOut className="btn-icon" />
           Logout
         </button>

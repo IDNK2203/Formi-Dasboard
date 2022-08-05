@@ -1,2 +1,8 @@
 @tailwind base;
 @tailwind components;
+
+@layer components {
+  .btn-primary {
+    @apply btn capitalize bg-[#ed1690] h-[2rem] min-h-[2rem] text-[#fff] shadow-sm hover:bg-transparent hover:text-[#ed1690];
+  }
+}

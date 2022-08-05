@@ -21,7 +21,7 @@ const ActivityBarGraph = () => {
             </span>
           </div>
           <div className="chart-widget__actions">
-            <select className="select select-ghost text-txtsec  select-xs max-w-xs mx-2">
+            <select className="select select-ghost text-txtsec font-light select-xs max-w-xs mx-2">
               <option disabled defaultValue>
                 Select Months
               </option>
