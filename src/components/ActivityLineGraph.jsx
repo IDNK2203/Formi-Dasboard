@@ -3,7 +3,7 @@ import { AiOutlineMore } from "react-icons/ai";
 
 const ActivityLineGraph = () => {
   return (
-    <div className="chart-widget mr-4 chart-widget--area">
+    <div className="chart-widget md:mr-4 chart-widget--area">
       <div className="chart-widget__header">
         <div className="chart-widget__title-container">
           <h3 className="chart-widget__title">Team Activity</h3>

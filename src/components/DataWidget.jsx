@@ -31,8 +31,8 @@ const sampleData = [
 const dataWidget = () => {
   return (
     <div className="data-widget__list">
-      {sampleData.map((e) => (
-        <div className="data-widget__list-item">
+      {sampleData.map((e, i) => (
+        <div className="data-widget__list-item" key={i}>
           <div className="data-widget__top">
             <h3 className="data-widget__title">{e.title}</h3>
             <AiOutlineMore className="more-icon" />

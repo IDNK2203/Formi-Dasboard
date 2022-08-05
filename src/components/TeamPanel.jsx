@@ -43,7 +43,7 @@ const TeamPanel = () => {
       </div>
       <ul className="performance-widget__list">
         {sampleData.map((e, i) => (
-          <li className="performance-widget__list-item">
+          <li className="performance-widget__list-item" key={i}>
             <div className="performance-widget__list-term-part">
               <span
                 className={`performance-widget__image-container ${e.bgColor}`}

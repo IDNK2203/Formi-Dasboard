@@ -3,13 +3,19 @@ import Logo from "../assets/formilogo.png";
 import { RiCalendarTodoLine, RiHome4Line } from "react-icons/ri";
 import { AiOutlineTeam } from "react-icons/ai";
 import { AiOutlineLineChart } from "react-icons/ai";
+import { AiOutlineClose } from "react-icons/ai";
 import { RiSettingsLine } from "react-icons/ri";
 import { RiBriefcase2Line } from "react-icons/ri";
 import { FiLogOut } from "react-icons/fi";
 
-const SideBar = () => {
+const SideBar = ({ setIsMenuOpen, isMenuOpen }) => {
   return (
-    <div className="sidebar">
+    <div className={`sidebar ${isMenuOpen ? "isMenuOpen" : ""}`}>
+      <div className="topbar__btn-container topbar__btn-container--close-Menu">
+        <button onClick={() => setIsMenuOpen((e) => !e)}>
+          <AiOutlineClose className="sidebar__navlist-icon text-[1.5rem]" />
+        </button>
+      </div>
       <div className="sidebar__brand">
         <div className="sidebar__brand-img-container">
           <img className="sidebar__brand-img-container" src={Logo} alt="logo" />

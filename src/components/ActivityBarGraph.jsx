@@ -3,7 +3,7 @@ import _BarChart from "./BarChart";
 
 const ActivityBarGraph = () => {
   return (
-    <div className="chart-widget ml-4">
+    <div className="chart-widget md:ml-4">
       <div className="chart-widget__header">
         <div className="chart-widget__title-container">
           <h3 className="chart-widget__title">Activities</h3>

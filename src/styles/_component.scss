@@ -87,6 +87,12 @@
   justify-content: space-between;
   color: $primary;
 }
+.topbar__title-container--mobile {
+  display: none;
+}
+.topbar__btn-container {
+  display: none;
+}
 
 .topbar__avatar-img-container {
   margin-right: 0.25rem;
@@ -149,7 +155,7 @@
   box-shadow: 2px 2px 6px 0 rgba(0, 0, 0, 0.25);
 }
 
-.chart-widget.mr-4.chart-widget--area {
+.chart-widget.chart-widget--area {
   width: 70%;
   aspect-ratio: 16/7.5;
 }
@@ -286,4 +292,82 @@
 .circle-text {
   font-size: 0.75rem;
   font-weight: bold;
+}
+
+// -------------------------------- Mobile and Tablet Style
+
+/* Inline #0 | http://localhost:5173/ */
+@media screen and (max-width: 768px) {
+  .panel-section__top,
+  .panel-section__bottom {
+    display: block;
+    padding: 0;
+    flex-direction: column;
+  }
+  .topbar__btn-container {
+    display: block;
+  }
+  .data-widget__list {
+    width: 100%;
+    grid-template-columns: 1fr;
+    margin: 1rem 0;
+  }
+  .chart-widget {
+    width: 100%;
+    margin: 1rem 0;
+  }
+  .sidebar {
+    display: none;
+  }
+  .sidebar.isMenuOpen {
+    position: absolute;
+    display: flex;
+  }
+  .topbar__title-container--mobile {
+    display: block;
+    .topbar__title {
+      font-size: 1.5rem;
+    }
+  }
+
+  .performance-widget {
+    margin-left: 0rem;
+    width: 100%;
+  }
+
+  .chart-widget.mr-4.chart-widget--area {
+    width: 100%;
+  }
+
+  div.chart-widget:nth-child(2) > div:nth-child(2) {
+    height: 80%;
+  }
+
+  /* Element | http://localhost:5173/ */
+
+  .topbar__title-container {
+    display: none;
+  }
+
+  .chart-widget__legends {
+    display: none;
+  }
+
+  .topbar {
+    padding: 0;
+    align-items: center;
+  }
+}
+
+/* Inline #0 | http://localhost:5173/ */
+
+@media screen and (max-width: 768px) {
+  .topbar__btn-container.topbar__btn-container--close-Menu {
+    position: absolute;
+    right: 0;
+    top: 1rem;
+  }
+  .page.isMenuOpen {
+    overflow-y: hidden;
+  }
 }
